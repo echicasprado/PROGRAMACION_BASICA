@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body{
+    font-family: 'Press Start 2P', cursive;
+    background-color: #D3EBCD;
+    color: rgb(73, 98, 98);
+    font-size: 12px;
+}
+
+#seleccionar-mascota{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid rgb(51, 133, 133);
+    border-radius: 15px;
+}
+
+.titulo{
+    width: 220px;
+    height: 80px;
+    text-align: center;
+    padding: 10px 25px 0 25px;
+    margin: 10px 25px 0 25px;
+    border: 10px solid rgb(51, 133, 133);
+    border-radius: 20px;
+    font-size: 32px;
+}
+
+.subtitulo{
+    font-size: 20px;
+}
+
+.tarjetas{
+    display: flex;
+    gap: 10px;
+}
+
+.tarjeta-de-mokepon{
+    width: 140px;
+    height: 160px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    border: 5px solid darkseagreen;
+    border-radius: 15px;
+    color: #635666;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjeta-de-mokepon img{
+    width: 100px;
+}
+
+#boton-mascota{
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    padding: 1px 6px 1px 6px;
+    box-sizing: border-box;
+    margin: 30px 0 30px 0;
+    border-radius: 40px;
+    border: 3px solid #635666;
+    color: rgb(73, 98, 98);
+    font-size: 12px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+input{
+    display: none;
+}
+
+#seleccionar-ataque{
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton-ataque{
+    color: #3d373e;
+    background-color: darkseagreen;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    width: 100px;
+}
+
+#mensajes{
+    width: 280px;
+    color:white;
+    background-color: #635666;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+    align-items: center;
+    flex-direction: column;
+}
+
+#boton-reiniciar{
+    border: transparent;
+    color: darkseagreen;
+    font-family: 'Press Start 2P', cursive;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.mascotas{
+    display: grid;
+    grid-template-columns: 100px 100px;
+}
