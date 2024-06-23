@@ -31,10 +31,11 @@ body{
     font-size: 20px;
 }
 
-.tarjetas{
+.tarjetas, .botones-ataques{
     display: flex;
     gap: 10px;
 }
+
 
 .tarjeta-de-mokepon{
     width: 140px;
@@ -100,7 +101,7 @@ input{
 
 #boton-reiniciar{
     border: transparent;
-    color: darkseagreen;
+    color: coral;
     font-family: 'Press Start 2P', cursive;
     padding: 10px;
     margin: 10px;
@@ -110,4 +111,22 @@ input{
 .mascotas{
     display: grid;
     grid-template-columns: 100px 100px;
+}
+
+#vida-mascota-jugador, #vida-mascota-enemigo{
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+.info-jugador, .info-enemigo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+@media (max-width: 380px) {
+    .tarjetas, .botones-ataques{
+        flex-direction: column;
+    }
+
 }
