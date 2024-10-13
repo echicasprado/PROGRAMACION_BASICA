@@ -15,13 +15,67 @@ let mascotaEnemigo = document.getElementById('nombre-mascota-enemigo')
 let resultado = document.getElementById('resultado')
 let divAtaqueJugador = document.getElementById('ataque-jugador')
 let divAtaqueEnemigo = document.getElementById('ataque-enemigo')
+const contendorTarjetas = document.getElementById('contendorTarjetas')
 
 let ataqueJugador
 let ataqueEnemigo
+let opcioneMokepons
 let vidasJugador = 3
 let vidasEnemigo = 3
+let mokepones = []
+
+class Mokepon{
+    constructor(nombre,foto,vida){
+        this.nombre = nombre
+        this.foto = foto
+        this.vida = vida
+        this.ataques = []
+    }
+}
+
+let hipodoge = new Mokepon('Hipodoge','assets/hipodoge.png',5);
+let capipepo = new Mokepon('Capipepo','assets/capipepo.png',5);
+let ratigueya = new Mokepon('Ratigueya','assets/ratigueya.png',5);
+
+hipodoge.ataques.push(
+    {nombre:'💧', id:'boton-agua'},
+    {nombre:'💧', id:'boton-agua'},
+    {nombre:'💧', id:'boton-agua'},
+    {nombre:'🔥', id:'boton-fuego'},
+    {nombre:'🌱', id:'boton-tierra'},
+)
+
+capipepo.ataques.push(
+    {nombre:'🌱', id:'boton-tierra'},
+    {nombre:'🌱', id:'boton-tierra'},
+    {nombre:'🌱', id:'boton-tierra'},
+    {nombre:'💧', id:'boton-agua'},
+    {nombre:'🔥', id:'boton-fuego'},
+)
+
+ratigueya.ataques.push(
+    {nombre:'🔥', id:'boton-fuego'},
+    {nombre:'🔥', id:'boton-fuego'},
+    {nombre:'🔥', id:'boton-fuego'},
+    {nombre:'💧', id:'boton-agua'},
+    {nombre:'🌱', id:'boton-tierra'},
+)
+
+mokepones.push(hipodoge,capipepo,ratigueya)
+
 
 function iniciarJuego(){
+
+   mokepones.forEach(mokepon => {
+    opcioneMokepons = `<input type="radio" name="mascota" id=${mokepon.nombre}>
+            <label class="tarjeta-de-mokepon" for=${mokepon.nombre}>
+                <img src=${mokepon.foto} alt=${mokepon.nombre}>
+                <p>${mokepon.nombre}</p>
+            </label>`
+    contendorTarjetas.innerHTML += opcioneMokepons
+   })
+
+
     botonMascotaJugador.addEventListener('click',seleccionarMascotaJugador)
     botonAtaqueTierra.addEventListener('click',ataqueTierra)
     botonAtaqueFuego.addEventListener('click',ataqueFuego)
